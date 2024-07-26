@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+</head>
+<body>
+  <section class="main content">
+    <ul class="text hidden content">
+        <li>J</li>
+        <li class="ghost">o</li>
+        <li class="ghost">y</li>
+        <li class="ghost">f</li>
+        <li class="ghost">u</li>
+        <li class="ghost">l</li>
+        <li class="spaced">A</li>
+        <li class="ghost">d</li>
+        <li class="ghost">v</li>
+        <li class="ghost">e</li>
+        <li class="ghost">n</li>
+        <li class="ghost">t</li>
+        <li class="ghost">u</li>
+        <li class="ghost">r</li>
+        <li class="ghost">e</li>
+        <li class="spaced">N</li>
+        <li class="ghost">e</li>
+        <li class="ghost">v</li>
+        <li class="ghost">e</li>
+        <li class="ghost">r</li>
+        <li class="spaced">E</li>
+        <li class="ghost">n</li>
+        <li class="ghost">d</li>
+        <li class="ghost">i</li>
+        <li class="ghost">n</li>
+        <li class="ghost">g</li>
+    </ul>
+  </section>
+  
+  <div class="portfolio content">
+    <a href="https://www.notion.so/78d0dc85434e4ca9abac5932f67fccdf?pvs=4" class="resume"><p>Res<span>u</span>me</p></a>
+    <div class="me">
+      <p class="name">Yoon Jane</p>
+      <p class="mail">janeyoon0127@gmail.com</p>
+    </div>
+  </div>
+
+</body>
+<script>
+    $(function() {
+  var text = $(".text");
+  var pf = $('.portfolio');
+  $(window).scroll(function() {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 200) {
+      text.removeClass("hidden");
+    } else {
+      text.addClass("hidden");
+    } 
+
+  });
+});
+window.addEventListener("wheel", function(e){
+	e.preventDefault();
+    },{passive : false});
+
+    var $html = $("html");
+    var page = 1;
+    var lastPage = $(".content").length;
+ 
+    $html.animate({scrollTop:0},10);
+
+    $(window).on("wheel", function(e){
+ 
+    if($html.is(":animated")) return;
+
+    if(e.originalEvent.deltaY > 0){
+        if(page== lastPage) return;
+        page++;
+    }else if(e.originalEvent.deltaY < 0){
+        if(page == 1) return;
+        page--;
+    }
+    var posTop = (page-1) * $(window).height();
+
+    $html.animate({scrollTop : posTop});
+
+    });
+</script>
+</html>

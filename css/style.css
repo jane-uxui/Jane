@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Muli:300,400,700');
+@import url('https://fonts.googleapis.com/css2?family=Paytone+One&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+a{
+  color:#fff;
+  text-decoration: none;
+}
+.main {
+  background-color: #000;
+  height: 200vh;
+  font-family: 'Muli', sans-serif;
+}
+.text {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  list-style: none;
+  border-bottom: 0;
+}
+
+.text.hidden {
+  border-bottom: 1px solid #fff;
+}
+
+.text li {
+  float: left;
+  font-weight: 700;
+  font-size: 2em;
+  color: #fff;
+  opacity: 1;
+  transition: all 0.5s ease-in-out;
+  max-width: 2em;
+}
+.text.hidden li.spaced {
+  padding-left: 0;
+}
+.text li.spaced {
+  padding-left: 0.5em;
+}
+
+.text.hidden li.ghost {
+  opacity: 0;
+  max-width: 0;
+}
+
+.portfolio{
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  background-color: #ece5da;
+}
+.resume{
+  position: relative;
+  font-family: "Paytone One";
+  text-align: center;
+  margin:0 auto;
+  font-size: 60px;
+  color: #202020;
+  text-transform: uppercase;
+  letter-spacing: -2px;
+  padding: 10px 0;
+}
+.resume p{
+  display: block;
+  margin: 11px 0 17px 0;
+  font-size: 80px;
+  line-height: 80px;
+  color: #f1ebe5;
+  text-shadow: 0 13.36px 8.896px #c4b59d,0 -2px 1px #fff;
+  letter-spacing: -4px;
+  transition: color 2s ease;
+  position: relative; 
+  z-index: 1;
+}
+.resume p span{
+  position: relative;
+  display: inline-block;
+  z-index: -1;
+  transition: transform 1s;
+  /* letter-spacing: 2px; */
+}
+.resume p:hover{
+  color:#202020;
+}
+.resume p:hover span{
+  transform: perspective(1000px) rotateY(180deg) translateX(-4px);
+}
+.me{
+  color:#A3A3A3;
+  position: absolute;
+  right: 5%;
+  bottom:5%;
+}
+.name{
+  font-size: 20px;
+}
+.mail{
+  font-size: 14px;
+}
