@@ -80,7 +80,7 @@ a {text-decoration: none;}
   z-index: 999;
 }
 
-.logo-fixed {
+.logo_fixed {
   position: fixed !important;
   top: 3% !important;
   left: 50%;
@@ -249,7 +249,7 @@ footer>p.copyright{
         font-size: 80px; 
         z-index: 999;
     }
-    .logo-fixed {
+    .logo_fixed {
     position: fixed !important;
     top: 3% !important;
     left: 50%;
@@ -298,30 +298,47 @@ footer>p.copyright{
     }
 
     /* middle_banner - mobile */
-     .middle_banner {
-    padding: 50px 20px;
-    background-attachment: fixed;
-    margin-bottom: 60px;
-  }
+    .middle_banner {
+  position: relative; /* 필수 */
+  padding: 50px 20px;
+  margin-bottom: 60px;
+  /* background-attachment 제거 */
+  background-size: cover; /* 추가 */
+  -webkit-background-size: cover; /* Safari 대응 */
+}
 
-  .middle_banner > .txt {
-    flex-direction: column;
-    width: 100%;
-    text-align: center;
-    gap: 30px;
-  }
+/* iOS에서 fixed 배경 대체 방법 */
+.middle_banner::before {
+  content: '';
+  position: fixed; /* iOS에서 fixed 대체 */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background: inherit; /* 부모 배경 상속 */
+  background-size: cover;
+}
 
-  .middle_banner > .txt > h3 {
-    font-size: 80px;
-    text-shadow: 0 0 10px #555;
-  }
+.middle_banner > .txt {
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  gap: 30px;
+  position: relative; /* 텍스트를 위로 올림 */
+}
 
-  .middle_banner > .txt > a {
-    font-size: 20px;
-    color: #FFF2EB;
-    border: 2px solid #FFF2EB;
-    animation: pulseBtn 2s infinite;
-  }
+.middle_banner > .txt > h3 {
+  font-size: 15vw; /* 모바일 가변 크기 (80px → 15vw) */
+  text-shadow: 0 0 10px #555;
+}
+
+.middle_banner > .txt > a {
+  font-size: 4.5vw; /* 20px → 4.5vw */
+  color: #FFF2EB;
+  border: 2px solid #FFF2EB;
+  animation: pulseBtn 2s infinite;
+}
 
   @keyframes pulseBtn {
     0% { transform: scale(1); }
@@ -353,3 +370,7 @@ footer>p.copyright{
     }
 }
 
+@media (max-width: 767px) {
+  .middle_banner > .txt > a {
+    animation: none; /* 모바일에서 애니메이션 제거 */
+  }}
