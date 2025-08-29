@@ -132,6 +132,7 @@ button{
   border-radius: 10px;
   border:1px solid #ddd;
   background-color: #fff;
+  color:#544f4f; font-size: 14px;
 }
 
 /* tel popup */
@@ -610,3 +611,4 @@ svg{fill:#999;width: 100%;}
       width: 100%;
       height: 20vh;
     }
+
