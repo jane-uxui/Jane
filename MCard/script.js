@@ -128,9 +128,12 @@
 
 document.addEventListener("DOMContentLoaded", () => {
   const openGallery = document.getElementById("more");
+  const openCall = document.getElementById("call")
   const popup = document.getElementById("gallery_popup");
+  const telpopup = document.getElementById("tel_popup")
   const dimmed = document.getElementById("dimmed");
   const closeBtn = popup.querySelector(".close");
+  const telCloseBtn = telpopup.querySelector(".close");
 
   const slidesContainer = popup.querySelector(".slides");
   const slides = popup.querySelectorAll(".slide");
@@ -146,16 +149,23 @@ document.addEventListener("DOMContentLoaded", () => {
     dimmed.style.display = "block";
     goToSlide(0);
   });
+  openCall.addEventListener("click",() => {
+    telpopup.style.display = "block"
+    dimmed.style.display = "block";
+  })
+
 
   // 팝업 닫기
   function closePopup() {
     popup.style.display = "none";
     dimmed.style.display = "none";
+    telpopup.style.display = "none";
   }
 
   closeBtn.addEventListener("click", closePopup);
   dimmed.addEventListener("click", closePopup);
-
+  telCloseBtn.addEventListener("click", closePopup);
+  
   // 슬라이드 이동
   function goToSlide(slide) {
     slidesContainer.style.transform = `translateX(${-100 * slide}%)`;
