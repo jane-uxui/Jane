@@ -9,9 +9,9 @@
   <script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-auth-compat.js"></script>
   <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=3a594397177448c26c0db16d04969166"></script>
   <link rel="stylesheet" href="style.css">
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Gaegu&family=Nanum+Gothic&family=Noto+Serif:wght@400;700&family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu&family=Nanum+Gothic&family=Noto+Serif+KR:wght@200..900&family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
@@ -19,10 +19,9 @@
 
 
 <body>
-
   <div class="kv">
     <div class="img"></div>
-    <video src="http://w.theirmood.com/src/wdd/particle/snow.mp4" loop autoplay muted></video>
+    <video src="http://w.theirmood.com/src/wdd/particle/snow.mp4" loop autoplay muted playsinline></video>
     <div class="txt_wrap"> 
       <h1>Getting</h1><h1>married</h1>
       <div class="date">
@@ -257,9 +256,39 @@
       </ul>
       <div class="tabs-stage">
         <div id="tab-1">
-          <p class="name">윤제인</p>
-          <p>카카오뱅크<input type="text" id="copyTxt" value="3333-04-17-43334" disabled></span><img src="img/copy.svg" alt="copy icon" onclick="copy()"></p>
-          <a href="https://link.kakaopay.com/__/JO3piiz">카카오페이 송금하기</a>
+          <div class="tab_wrap">
+            <div class="name_wrap">
+              <p class="name">윤제인</p>
+              <p>신부</p>
+            </div>
+            <p>카카오뱅크</p>
+            <div class="account_wrap">
+              <input type="text" id="copyTxt" value="3333-04-17-43334" disabled><img class="copy" src="img/copy.svg" alt="copy icon" onclick="copy()">
+              <a href="https://link.kakaopay.com/__/JO3piiz"><img src="img/payment_icon_yellow_small.png" alt="kakaopay"></a>
+            </div>
+          </div>
+          <div class="tab_wrap">
+            <div class="name_wrap">
+              <p class="name">윤제인</p>
+              <p>신부 아버지</p>
+            </div>
+            <p>카카오뱅크</p>
+            <div class="account_wrap">
+              <input type="text" id="copyTxt" value="3333-04-17-43334" disabled><img class="copy" src="img/copy.svg" alt="copy icon" onclick="copy()">
+              <a href="https://link.kakaopay.com/__/JO3piiz"><img src="img/payment_icon_yellow_small.png" alt="kakaopay"></a>
+            </div>
+          </div>
+          <div class="tab_wrap">
+            <div class="name_wrap">
+              <p class="name">윤제인</p>
+              <p>신부 어머니</p>
+            </div>
+            <p>카카오뱅크</p>
+            <div class="account_wrap">
+              <input type="text" id="copyTxt" value="3333-04-17-43334" disabled><img class="copy" src="img/copy.svg" alt="copy icon" onclick="copy()">
+              <a href="https://link.kakaopay.com/__/JO3piiz"><img src="img/payment_icon_yellow_small.png" alt="kakaopay"></a>
+            </div>
+          </div>
         </div>
         <div id="tab-2">
           <p>Phasellus pharetra aliquet viverra. Donec scelerisque tincidunt diam, eu fringilla urna auctor at.</p>
@@ -272,7 +301,7 @@
   <img src="img/kv_img.png" alt="">
 </div>
 
-<script src="script.js"></script>
+  <script src="script.js"></script>
 
 </body>
 <Script>
@@ -316,7 +345,7 @@ function animate() {
 animate();
 
 // Show the first tab by default
-$('.tabs-stage div').hide();
+$('.tabs-stage>div').hide();
 $('.tabs-stage div:first').show();
 $('.tabs-nav li:first').addClass('tab-active');
 
@@ -325,11 +354,9 @@ $('.tabs-nav a').on('click', function(event){
   event.preventDefault();
   $('.tabs-nav li').removeClass('tab-active');
   $(this).parent().addClass('tab-active');
-  $('.tabs-stage div').hide();
+  $('.tabs-stage>div').hide();
   $($(this).attr('href')).show();
 });
 
 </Script>
 </html>
-
-
