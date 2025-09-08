@@ -30,6 +30,18 @@ textarea{
   margin:10px auto;
 }
 
+section{
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease-out;
+}
+  section.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+
+
 .kv{
   position: relative;
   width: 100%; height: 80vh;
@@ -533,8 +545,8 @@ svg{fill:#999;width: 100%;}
 #account p{
   font-size: 14px;
   padding:5px 0;
-  font-family: "Nanum Gothic", sans-serif;
   color:#544f4f;
+  font-family: "Noto Serif KR", serif;
 }
 #account .tabs {
   width: 90%;
@@ -588,6 +600,7 @@ svg{fill:#999;width: 100%;}
 #account .tab_wrap p{
   color:#999;
   padding:10px 0;
+  font-family: "Nanum Gothic", sans-serif;
   font-size: 12px;;
 }
 #account #tab-1 input{
