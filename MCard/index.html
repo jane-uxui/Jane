@@ -4,39 +4,31 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
     <title>Welcome joo</title>
+    
+    <script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-auth-compat.js"></script>
     <meta property="og:url" content="https://jane-uxui.github.io/Jane/MCard/">
     <meta property="og:title" content="쭈와 하람의 결혼에 초대합니다">
     <meta property="og:type" content="website">
-    <meta property="og:image" content="https://github.com/jane-uxui/Jane/blob/e0e41f8898db125ce2499955546cece92f4d0b1d/MCard/img/Intersect.png">
-    <meta property="og:description" content="우리의 결혼식에 소중한 분들을 초대합니다 ">
+    <meta property="og:image" content="https://raw.githubusercontent.com/jane-uxui/Jane/e0e41f8898db125ce2499955546cece92f4d0b1d/MCard/img/Intersect.png">
+    <meta property="og:description" content="우리의 결혼식에 소중한 분들을 초대합니다">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/12.2.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/12.2.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/12.2.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/12.2.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/12.2.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/12.2.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/12.2.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/12.2.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/12.2.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/12.2.1/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-
-    <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=3a594397177448c26c0db16d04969166"></script>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Gaegu&family=Nanum+Gothic&family=Noto+Serif+KR:wght@200..900&family=Qwitcher+Grypen:wght@400;700&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+
+    
+  <script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-auth-compat.js"></script>
+  <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=3a594397177448c26c0db16d04969166"></script>
+  <link rel="stylesheet" href="style.css">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquerymobile/1.4.5/jquery.mobile.min.js"></script>
   </head>
+
   <body>
   <div class="kv">
     <div class="img"></div>
@@ -282,7 +274,7 @@
             </div>
             <p>카카오뱅크</p>
             <div class="account_wrap">
-              <input type="text" id="copyTxt" value="3333-04-17-43334" disabled><img class="copy" src="img/copy.svg" alt="copy icon" onclick="copy()">
+              <input type="text" class="copyTxt" value="3333-04-17-43334" disabled><img class="copy" src="img/copy.svg" alt="copy icon" onclick="copy(this)">
               <a href="https://link.kakaopay.com/__/JO3piiz"><img src="img/payment_icon_yellow_small.png" alt="kakaopay"></a>
             </div>
           </div>
@@ -293,7 +285,7 @@
             </div>
             <p>카카오뱅크</p>
             <div class="account_wrap">
-              <input type="text" id="copyTxt" value="3333-04-17-43334" disabled><img class="copy" src="img/copy.svg" alt="copy icon" onclick="copy()">
+              <input type="text" class="copyTxt" value="3333-04-17-43334" disabled><img class="copy" src="img/copy.svg" alt="copy icon" onclick="copy(this)">
               <a href="https://link.kakaopay.com/__/JO3piiz"><img src="img/payment_icon_yellow_small.png" alt="kakaopay"></a>
             </div>
           </div>
@@ -304,7 +296,7 @@
             </div>
             <p>카카오뱅크</p>
             <div class="account_wrap">
-              <input type="text" id="copyTxt" value="3333-04-17-43334" disabled><img class="copy" src="img/copy.svg" alt="copy icon" onclick="copy()">
+              <input type="text" class="copyTxt" value="3333-04-17-43334" disabled><img class="copy" src="img/copy.svg" alt="copy icon" onclick="copy(this)">
               <a href="https://link.kakaopay.com/__/JO3piiz"><img src="img/payment_icon_yellow_small.png" alt="kakaopay"></a>
             </div>
           </div>
@@ -320,7 +312,7 @@
   <img src="img/kv_img.png" alt="">
 </div>
 
-  <script src="script.js"></script>
+    <script defer src="script.js"></script>
 
 </body>
 <Script>
@@ -342,14 +334,14 @@
 
 
 
-  function copy() {
-    const copyTxt = document.getElementById("copyTxt")
-    copyTxt.select();
-    copyTxt.setSelectionRange(0,99999)
+  function copy(btn) {
+  const input = btn.previousElementSibling; // 버튼 바로 앞 input 선택
+  input.select();
+  input.setSelectionRange(0, 99999);
 
-    navigator.clipboard.writeText(copyTxt.value);
-    alert("복사되었습니다.");
-  }
+  navigator.clipboard.writeText(input.value);
+  alert("복사되었습니다.");
+}
     
   // KV parallax
   const img = document.querySelector(".kv .img");
