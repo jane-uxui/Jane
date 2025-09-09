@@ -194,3 +194,29 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
+
+const infoWrap = document.querySelector(".info_wrap");
+const slides = document.querySelectorAll(".info_wrap > div");
+const prevBtn = document.querySelector(".btn.prev");
+const nextBtn = document.querySelector(".btn.next");
+
+let currentSlide = 0;
+
+function showSlide(index) {
+  if (index < 0) index = slides.length - 1;
+  if (index >= slides.length) index = 0;
+  currentSlide = index;
+  const offset = -index * 50; // %
+  infoWrap.style.transform = `translateX(${offset}%)`;
+}
+
+prevBtn.addEventListener("click", () => {
+  showSlide(currentSlide - 1);
+});
+
+nextBtn.addEventListener("click", () => {
+  showSlide(currentSlide + 1);
+});
+
+// 초기 상태
+showSlide(0);
