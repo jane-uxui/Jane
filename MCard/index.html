@@ -228,8 +228,8 @@
             </div>
             <textarea id="msg" placeholder="해주고 싶은 메세지를 이곳에 적어주세요"></textarea>
             <button onclick="saveMsg()" id="call">내 방명록 남기기</button>
-
-          <div id="list"></div>
+            
+            <div id="list"></div>
       
       </section>
       
@@ -463,6 +463,8 @@
       el: ".swiper-pagination",
       clickable: true,
     },
+    observer: true,          // DOM 변경 감지
+    observeParents: true,
   });
 
 </Script>
