@@ -1,4 +1,3 @@
-// STEP1: 당신 프로젝트의 config 사용 
   const firebaseConfig = {
   apiKey: "AIzaSyAS8ehPOt7nrVgTPZmPp0tlZqirXnhmwOk",
   authDomain: "m-card-2f3d7.firebaseapp.com",
@@ -18,7 +17,7 @@
 
 
 
-  // STEP2: 익명 로그인 처리(매번 새로고침에도 사용자 불편 無)
+  // 익명 로그인 처리
   firebase.auth().signInAnonymously().catch(console.error);
 
   // 댓글 남기기
