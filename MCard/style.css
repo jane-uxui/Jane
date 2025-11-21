@@ -19,7 +19,7 @@ h2{font-size: 20px;}
 span{font-size: 12px; color:#999;font-family: "Noto Serif KR", serif;}
 p{font-size: 12px;
   line-height: 25px;}
-input, textarea{
+input{
   width: 45%; height: 30px;
   border: 1px solid #ddd;
   border-radius: 8px;
@@ -30,7 +30,9 @@ input::placeholder, textarea::placeholder{
   font-family: "Gaegu", sans-serif;
 }
 textarea{
-  width: 85%; height: 60px;
+  max-width: 85%; width:85%;height: 60px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
   padding:10px;
   margin:10px auto;
 }
@@ -287,6 +289,11 @@ section button{
   text-align: left;
   width: 80%;;
 }
+
+.navi_wrap p{
+  font-family: "Nanum Gothic", sans-serif;
+  color:#555;
+}
 .navi_wrap>div{
   padding:20px 0;
   border-bottom: 1px solid #e6e6e6;
@@ -421,12 +428,13 @@ section button{
   background: rgba(255,255,255,0.7);
   font-size: 16px;
   color: #ddd;
-  z-index: 1000;
+  z-index: 1000;padding:6px;
 }
+.prev img{transform: rotate(180deg);}
 svg{fill:#999;width: 100%;}
-
-.btn-prev { left: 0; }
-.btn-next { right:0 }
+.btn img{width: 20px;}
+/* .btn-prev { left: 0; }
+.btn-next { right:0 } */
 
 
 
@@ -602,6 +610,21 @@ svg{fill:#999;width: 100%;}
 }
 
 
+#flower{
+  text-align: center;
+  margin:60px auto;
+  ;
+}
+#flower img{
+  width: 20px;
+}
+#flower p{
+  font-size: 14px;
+  padding:5px 0;
+  color:#544f4f;
+  font-family: "Noto Serif KR", serif;
+}
+
 
 #account{
   text-align: center;
@@ -637,7 +660,7 @@ svg{fill:#999;width: 100%;}
 }
 #account .tabs .tab-active a {
   background: #fff;
-  color: #c94e4e;
+  color: #f79e9e;
   border-radius: 8px 8px 0 0;
   cursor: default;
 }
@@ -669,7 +692,7 @@ svg{fill:#999;width: 100%;}
   font-family: "Nanum Gothic", sans-serif;
   font-size: 12px;;
 }
-#account #tab-1 input{
+#account input{
   background: none;
   border:none;
   color:#544f4f;
