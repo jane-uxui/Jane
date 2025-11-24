@@ -57,7 +57,7 @@ section.show {
 .kv .img {
   position: absolute;
   top: 0;  left: 0;
-  width: 100%;  height: 100%;
+  width: 101%;  height: 100%;
   background: url(img/kv_img.png) center/cover no-repeat;
   will-change: transform;
   pointer-events: none;
@@ -541,36 +541,30 @@ svg{fill:#999;width: 100%;}
   font-size: 14px;
   color: #544f4f;
 }
-
-.carousel-container {
-  position: relative;
-  overflow: hidden;
-  width: 100%;max-width: 400px;
-  height: auto;
+#info .tabs{
+  display: flex;
+  justify-content: space-around;
+  width: 360px;margin:20px auto;
+  font-family: "Nanum Gothic", sans-serif;
+}
+#info .tabs .active{
+  font-weight: bold;
+  border-bottom: 2px solid #000;
 }
 
 .info_wrap {
-  display: flex;
-  transition: transform 0.4s ease-in-out;
-  width: 200%;
-  position: relative;
+  float: left;
+	width: 100%;
 }
 
-.info_wrap .food,
-.info_wrap .drive {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 10px;
-}
-
-.info_wrap .img_wrap {
+.img_wrap {
   width: 90%;
   height: 180px;
   margin-bottom: 12px;
   margin:0 auto;
 }
 
-.info_wrap .img_wrap img {
+.img_wrap img {
   width: 100%; height: 180px;
   border-radius: 8px;
   object-fit: cover;
@@ -746,7 +740,7 @@ svg{fill:#999;width: 100%;}
       width: 100%;
       height: 20vh;
     }
-
+.root_daum_roughmap .cont{display: none;}
 
 
 /* contact ver2. */
@@ -768,7 +762,7 @@ svg{fill:#999;width: 100%;}
   width: 120px;height: 120px;;
   border-radius:  100px;
   background-color: #d9d9d9;
-  overflow: hidden;
+  overflow: hidden; 
 }
 #contact .profile_wrap>img{width: 15px;height: 15px;}
 #contact .profile_wrap .img>img{width: 100%;}

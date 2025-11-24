@@ -151,6 +151,19 @@
           <span>Tel. 032-864-5500</span>
         </div>
       <div id="map"></div>
+<p>위랑 아래 지도중에 고르세용</p>
+          <div id="daumRoughmapContainer1763964889649" class="root_daum_roughmap root_daum_roughmap_landing"></div>
+          <script charset="UTF-8" class="daum_roughmap_loader_script" src="https://ssl.daumcdn.net/dmaps/map_js_init/roughmapLoader.js"></script>
+
+          <!-- 3. 실행 스크립트 -->
+          <script charset="UTF-8">
+            new daum.roughmap.Lander({
+              "timestamp" : "1763964889649",
+              "key" : "cqbvna626qu",
+              "mapWidth" : "400",
+              "mapHeight" : "200"
+            }).render();
+          </script>
 
 
       <div class="navi_wrap">
@@ -183,21 +196,19 @@
       <section id="gallery">
           <span>GALLERY</span>
           <h2>웨딩 갤러리</h2>
-      <div class="wrapper">
-        <div class="photobanner" id="banner">
-          <img class="first" src="img/kv_img.png" alt="" />
-          <img src="https://i.ibb.co/DfbLcN1/photo-1426901013385-803d40bd5558.jpg " alt="" />
-          <img src="img/kv_img.png " alt="" />
-          <img src="https://i.ibb.co/DfbLcN1/photo-1426901013385-803d40bd5558.jpg " alt="" />
-          <img src="img/kv_img.png " alt="" />
-          <img src="https://i.ibb.co/DfbLcN1/photo-1426901013385-803d40bd5558.jpg " alt="" />
-          <img src="img/kv_img.png " alt="" />
-          <img src="https://i.ibb.co/DfbLcN1/photo-1426901013385-803d40bd5558.jpg " alt="" />
-          <img src="img/kv_img.png " alt="" />
-          <img src="https://i.ibb.co/DfbLcN1/photo-1426901013385-803d40bd5558.jpg " alt="" />
+        <div class="wrapper">
+          <div class="photobanner" id="banner">
+            <img class="first" src="img/gallery/gallery_20.jpg" alt="" />
+            <img class="first" src="img/gallery/gallery_22.jpg" alt="" />
+            <img class="first" src="img/gallery/gallery_02.jpg" alt="" />
+            <img class="first" src="img/gallery/gallery_03.jpg" alt="" />
+            <img class="first" src="img/gallery/gallery_04.jpg" alt="" />
+            <img class="first" src="img/gallery/gallery_05.jpg" alt="" />
+            <img class="first" src="img/gallery/gallery_06.jpg" alt="" />
+            <img class="first" src="img/gallery/gallery_07.jpg" alt="" />
+          </div>
         </div>
-      </div>
-      <button id="more">사진 더보기</button>
+        <button id="more">사진 더보기</button>
       </section>
       
       <div id="dimmed"></div>
@@ -205,10 +216,21 @@
         <a class="close">&times;</a>
         <div class="swiper mySwiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide"><img src="img/kv_img.png" alt=""></div>
-            <div class="swiper-slide"><img src="https://images.theirmood.com/resources/46097/card/BgIftGNgps/JpFZ1H8r2w.png?f=webp&w=1280" alt=""></div>
-            <div class="swiper-slide"><img src="img/kv_img.png" alt=""></div>
-            <div class="swiper-slide"><img src="img/kv_img.png" alt=""></div>
+            <div class="swiper-slide"><img src="img/gallery/gallery_01.jpg" alt="wedding01"></div>
+            <div class="swiper-slide"><img src="img/gallery/gallery_02.jpg" alt="wedding01"></div>
+            <div class="swiper-slide"><img src="img/gallery/gallery_03.jpg" alt="wedding01"></div>
+            <div class="swiper-slide"><img src="img/gallery/gallery_04.jpg" alt="wedding01"></div>
+            <div class="swiper-slide"><img src="img/gallery/gallery_05.jpg" alt="wedding01"></div>
+            <div class="swiper-slide"><img src="img/gallery/gallery_06.jpg" alt="wedding01"></div>
+            <div class="swiper-slide"><img src="img/gallery/gallery_07.jpg" alt="wedding01"></div>
+            <div class="swiper-slide"><img src="img/gallery/gallery_08.jpg" alt="wedding01"></div>
+            <div class="swiper-slide"><img src="img/gallery/gallery_09.jpg" alt="wedding01"></div>
+            <div class="swiper-slide"><img src="img/gallery/gallery_10.jpg" alt="wedding01"></div>
+            <div class="swiper-slide"><img src="img/gallery/gallery_11.jpg" alt="wedding01"></div>
+            <div class="swiper-slide"><img src="img/gallery/gallery_12.jpg" alt="wedding01"></div>
+            <div class="swiper-slide"><img src="img/gallery/gallery_13.jpg" alt="wedding01"></div>
+            <div class="swiper-slide"><img src="img/gallery/gallery_14.jpg" alt="wedding01"></div>
+            <div class="swiper-slide"><img src="img/gallery/gallery_15.jpg" alt="wedding01"></div>
           </div>
           <div class="swiper-pagination"></div>
         </div>
@@ -237,24 +259,40 @@
       <section id="info">
           <span>INFORMATION</span>
           <h2>예식정보 및 안내사항</h2>
-          <div class="carousel-container">
-            <div class="info_wrap">
-              <div class="food">
+          <ul class="tabs">
+            <li class="active" rel="tab1">연회장</li>
+            <li rel="tab2">전세 버스</li>
+            <li rel="tab3">포토 부스</li>
+          </ul>
+
+          <div class="info_wrap">
+            <h3 class="d_active tab_drawer_heading" rel="tab1"></h3>
+            <div id="tab1" class="tab_content">
                 <div class="img_wrap">
                   <img src="https://www.marryvilia.co.kr/PEG/gallery/gallery.17628263097323.png" alt="">
                 </div>
                 <p class="title">연회 & 식사 안내</p>
                 <p>식사는 결혼식 및 사진 촬영이 끝난 후 <br>웨딩홀 0층에서 뷔페식으로 진행됩니다.</p>
                 <p>부족함 없이 증기실 수 있도록 <br>한식을 비롯해 중식, 양식, 일식 등 <br>다양한 메뉴가 준비되어 있습니다.</p>
-              </div>
-              <div class="drive">
-                <p class="title">전세 버스 안내</p>
-                <p>탑승 일시: 2026년 1월 1일 오전 9시 <br>출발 탑승: 장소 서울시 행복동 앞</p>
-                <p>출발 시간 10분 전까지 도착해 주세요. <br>왕복 이용 가능합니다.</p>
-              </div>
             </div>
-            <button class="btn prev"><img src="img/arrow-right.png"></button>
-            <button class="btn next"><img src="img/arrow-right.png"></button>
+            <h3 class="d_active tab_drawer_heading" rel="tab2"></h3>
+            <div id="tab2" class="tab_content">
+                <div class="img_wrap">
+                  <img src="https://www.marryvilia.co.kr/PEG/gallery/gallery.17628263097323.png" alt="">
+                </div>
+                <p class="title">전세버스</p>
+                <p>식사는 결혼식 및 사진 촬영이 끝난 후 <br>웨딩홀 0층에서 뷔페식으로 진행됩니다.</p>
+                <p>부족함 없이 증기실 수 있도록 <br>한식을 비롯해 중식, 양식, 일식 등 <br>다양한 메뉴가 준비되어 있습니다.</p>
+            </div>
+            <h3 class="d_active tab_drawer_heading" rel="tab3"></h3>
+            <div id="tab3" class="tab_content">
+                <div class="img_wrap">
+                  <img src="https://www.marryvilia.co.kr/PEG/gallery/gallery.17628263097323.png" alt="">
+                </div>
+                <p class="title">포토 부스</p>
+                <p>식사는 결혼식 및 사진 촬영이 끝난 후 <br>웨딩홀 0층에서 뷔페식으로 진행됩니다.</p>
+                <p>부족함 없이 증기실 수 있도록 <br>한식을 비롯해 중식, 양식, 일식 등 <br>다양한 메뉴가 준비되어 있습니다.</p>
+            </div>
           </div>
       </section>
 
@@ -361,9 +399,9 @@
           앞으로 맞이할 저희의 봄날을 축복해주세요.</p>
 
         <div class="profile_wrap"> 
-          <div class="img"><img src="" alt=""></div>
+          <div class="img"><img src="img/haram_pro.png" alt=""></div>
           <img src="img/heart_icon.png" alt="">
-          <div class="img"><img src="" alt=""></div>
+          <div class="img"><img src="img/joo_pro.png" alt=""></div>
         </div>
 
         <div class="contact_wrap">
@@ -495,7 +533,6 @@
 
   animate();
 
-  // Show the first tab by default
   $('.tabs-stage>div').hide();
   $('.tabs-stage div:first').show();
   $('.tabs-nav li:first').addClass('tab-active');
@@ -521,6 +558,44 @@
     observeParents: true,
   });
 
+ // tabbed content
+    $(".tab_content").hide();
+    $(".tab_content:first").show();
+
+  /* if in tab mode */
+    $("ul.tabs li").click(function() {
+		
+      $(".tab_content").hide();
+      var activeTab = $(this).attr("rel"); 
+      $("#"+activeTab).fadeIn();		
+		
+      $("ul.tabs li").removeClass("active");
+      $(this).addClass("active");
+
+	  $(".tab_drawer_heading").removeClass("d_active");
+	  $(".tab_drawer_heading[rel^='"+activeTab+"']").addClass("d_active");
+	  
+    });
+	/* if in drawer mode */
+	$(".tab_drawer_heading").click(function() {
+      
+      $(".tab_content").hide();
+      var d_activeTab = $(this).attr("rel"); 
+      $("#"+d_activeTab).fadeIn();
+	  
+	  $(".tab_drawer_heading").removeClass("d_active");
+      $(this).addClass("d_active");
+	  
+	  $("ul.tabs li").removeClass("active");
+	  $("ul.tabs li[rel^='"+d_activeTab+"']").addClass("active");
+    });
+	
+	
+	/* Extra class "tab_last" 
+	   to add border to right side
+	   of last tab */
+	$('ul.tabs li').last().addClass("tab_last");
+	
 </Script>
 </html>
 
