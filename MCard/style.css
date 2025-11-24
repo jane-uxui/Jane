@@ -284,6 +284,7 @@ section button{
   padding:10px 0;;
 }
 .location_txt p.adress{font-size: 14px; font-weight: 400;}
+.location_txt span{color:#999;}
 .navi_wrap{
   margin:30px auto;
   text-align: left;

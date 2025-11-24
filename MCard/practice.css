@@ -26,7 +26,7 @@ h2{
     font-weight: bold;
 }
 section{margin:60px auto; overflow: hidden;}
-
+img{width: 100%;}
 
 
 
@@ -43,7 +43,7 @@ section{margin:60px auto; overflow: hidden;}
     font-size: 36px;
 }
 #kv1 .img{
-    width: auto;height: 650px;
+    width: auto;
     overflow: hidden;
     background-image:url(img/#);
     background-size: cover;
@@ -117,8 +117,9 @@ section{margin:60px auto; overflow: hidden;}
     z-index: -999;
     position: relative;
     background-size: cover;
-    background-position: center;
+    background-position: center;overflow: hidden;
 }
+#kv2 .img img{width: 100%;}
 #kv2 .name_wrap{
     margin:20px auto;
     width: 50%;

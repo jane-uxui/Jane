@@ -110,19 +110,19 @@
   });
 
 
-  window.onload = function() {
-  var container = document.getElementById('map');
-  var options = {
-    center: new kakao.maps.LatLng(37.3815349667371, 126.6597361315122),
-    level: 2
-  };
-  var map = new kakao.maps.Map(container, options);
+//   window.onload = function() {
+//   var container = document.getElementById('map');
+//   var options = {
+//     center: new kakao.maps.LatLng(37.3815349667371, 126.6597361315122),
+//     level: 2
+//   };
+//   var map = new kakao.maps.Map(container, options);
 
-  var marker = new kakao.maps.Marker({
-    position: new kakao.maps.LatLng(37.3815349667371, 126.6597361315122)
-  });
-  marker.setMap(map);
-};
+//   var marker = new kakao.maps.Marker({
+//     position: new kakao.maps.LatLng(37.3815349667371, 126.6597361315122)
+//   });
+//   marker.setMap(map);
+// };
 
 
 document.addEventListener("DOMContentLoaded", () => {
