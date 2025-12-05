@@ -13,10 +13,6 @@
   const db = firebase.firestore();
 
 
-
-
-
-
   // 익명 로그인 처리
   firebase.auth().signInAnonymously().catch(console.error);
 
@@ -123,6 +119,37 @@
 //   });
 //   marker.setMap(map);
 // };
+
+function updateCountdown() {
+  const targetDate = new Date("2026-01-17T11:00:00"); 
+  const now = new Date();
+
+  const diff = targetDate - now;
+
+  if (diff <= 0) {
+    document.getElementById("ddayText").innerHTML = "오늘은 결혼식 날입니다 💍";
+    return;
+  }
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+  document.getElementById("days").textContent = days;
+  document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
+  document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+  document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+
+  document.getElementById("ddayText").innerHTML =
+    `하람 ❤️ 주의 결혼식이 <span>${days + 1}</span>일 남았습니다.`;
+}
+
+// 1초마다 실행
+setInterval(updateCountdown, 1000);
+
+// 처음 로딩 시 한 번 실행
+updateCountdown();
 
 
 document.addEventListener("DOMContentLoaded", () => {

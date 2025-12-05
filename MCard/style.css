@@ -4,7 +4,7 @@ body{
   color:#333;
 }
 .body_wrap{
-  max-width: 400px;
+  max-width: 430px;
   background-color: #f0f0f0;
   margin:0 auto;
   overflow-x: hidden;
@@ -164,6 +164,7 @@ section button{
   z-index: 999;
 }
 #tel_popup{
+  max-width: 430px;
   display: none;
   position: fixed;
   top: 50%;
@@ -223,11 +224,9 @@ section button{
     font-weight: 700; color:#ccc;
     font-size: 16px;
   }
-    #tel_popup .ctt_wrap a{
-    padding-left: 10px;
-    color:#ccc;
+    #tel_popup .ctt_wrap a:last-child{
+    padding-left: 12px;
   }
-
 
 /* calendar */
 .calander_warpper{
@@ -272,6 +271,76 @@ section button{
   color: #b27085
 }
 
+/* 디데이 */
+#countdown {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin: 40px auto;
+  width: 312px;
+}
+.time-box {
+  width: 50px;
+  height: 70px;
+  border-radius: 8px;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Noto Serif KR', serif;
+}
+.time-box span {
+  font-size: 26px;
+  font-weight: 600;
+  color: #333;
+}
+.time-box p {
+  font-size: 12px;
+  margin-top: 4px;
+  color: #666;
+}
+.colon {
+  font-size: 30px;
+  color: #b8b8b8;
+}
+.dday-text {
+  text-align: center;
+  font-size: 14px;
+  margin-top: 20px;
+  color: #333;
+}
+.dday-text span {
+  color: #f79e9e;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+#img_section{
+  width: 100%;
+  padding:30px 0;
+}
+#img_section .img{
+  width: 312px;height: 450px;margin:0 auto;
+}
+#img_section .img img{width: 100%;}
+#img_section .img_txt{
+  width: 150%; 
+  margin-left:-14%;margin-bottom: -40%;
+  rotate: -20deg;
+  opacity: 0.2;
+}
+#img_section .img_txt p{
+  font-size: 160px;
+  line-height: 120px;
+  color:#333;
+  font-family: "Qwitcher Grypen", cursive;
+  text-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+
 /* 지도 */
 #location{
   text-align: center;
@@ -284,7 +353,7 @@ section button{
   padding:10px 0;;
 }
 .location_txt p.adress{font-size: 14px; font-weight: 400;}
-.location_txt span{color:#999;}
+#location .location_txt span{color:#999;}
 .navi_wrap{
   margin:30px auto;
   text-align: left;
@@ -361,6 +430,23 @@ section button{
   border-radius: 8px;
 }
 
+.gallery{
+  width: 312px; margin: 18px auto;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 8px
+}
+.gal_img_wrap{
+  aspect-ratio: 1 / 1;
+  overflow: hidden; margin: 0;
+}
+.gal_img_wrap img{
+  width:100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
 /* 팝업 */
 .gallery_popup {
   display: none;
@@ -372,8 +458,7 @@ section button{
 
 /* 슬라이더 */
 .swiper {
-  height: 70vh;
-  max-width: 400px;
+  max-width: 98vw;
   overflow: hidden;
   display: flex;
   align-items: center;
