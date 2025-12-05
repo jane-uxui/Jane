@@ -22,6 +22,11 @@
   <script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-firestore-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/12.0.0/firebase-auth-compat.js"></script>
   <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=3a594397177448c26c0db16d04969166"></script>
+  <script src="https://t1.kakaocdn.net/kakao_js_sdk/2.5.0/kakao.min.js"></script>
+  <script>
+    Kakao.init("3a594397177448c26c0db16d04969166"); 
+  </script>
+
   <link rel="stylesheet" href="style.css">
   
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
@@ -517,14 +522,15 @@
       </section>
 
 
-
+      
       <div class="footer_img">
         <img src="img/kv_img.png" alt="">
       </div>
-    </div>
+    
+    <button id="kakaoShareBtn">청첩장 카카오톡으로 공유하기</button>
+  </div>
 
     <script defer src="script.js"></script>
-
 </body>
 <Script>
    const sections = document.querySelectorAll("section");
@@ -646,7 +652,18 @@
 	   to add border to right side
 	   of last tab */
 	$('ul.tabs li').last().addClass("tab_last");
-	
+
+
+  // kakao share
+	document.getElementById("kakaoShareBtn").addEventListener("click", function () {
+  
+  Kakao.Share.sendCustom({
+    templateId: 126625,  
+    templateArgs: {}      // 템플릿 변수 있으면 여기 넣기 (없으면 빈 객체 유지)
+  });
+
+});
+
 </Script>
 </html>
 
