@@ -160,20 +160,21 @@ document.addEventListener("DOMContentLoaded", () => {
   const dimmed = document.getElementById("dimmed");
   const closeBtn = popup.querySelector(".close");
   const telCloseBtn = telpopup.querySelector(".close");
-
-  const slidesContainer = popup.querySelector(".slides");
-  const slides = popup.querySelectorAll(".slide");
-  const nextBtn = popup.querySelector(".btn-next");
-  const prevBtn = popup.querySelector(".btn-prev");
-
-  let currentSlide = 0;
-  const maxSlide = slides.length - 1;
+  const thumbs = document.querySelectorAll(".gal_img_wrap");
 
   // 팝업 열기
   openGallery.addEventListener("click", () => {
     popup.style.display = "grid";
     dimmed.style.display = "block";
     goToSlide(0);
+  });
+  // 썸네일 클릭 → 해당 슬라이드로 팝업 열기
+  thumbs.forEach((thumb, index) => {
+    thumb.addEventListener("click", () => {
+      popup.style.display = "grid";
+      dimmed.style.display = "block";
+      swiper.slideTo(index, 0);
+    });
   });
   openCall.addEventListener("click",() => {
     telpopup.style.display = "block"
@@ -192,25 +193,6 @@ document.addEventListener("DOMContentLoaded", () => {
   dimmed.addEventListener("click", closePopup);
   telCloseBtn.addEventListener("click", closePopup);
   
-  // 슬라이드 이동
-  function goToSlide(slide) {
-    slidesContainer.style.transform = `translateX(${-100 * slide}%)`;
-    currentSlide = slide;
-  }
-
-  function nextSlide() {
-    currentSlide = currentSlide === maxSlide ? 0 : currentSlide + 1;
-    goToSlide(currentSlide);
-  }
-
-  function prevSlide() {
-    currentSlide = currentSlide === 0 ? maxSlide : currentSlide - 1;
-    goToSlide(currentSlide);
-  }
-
-  nextBtn.addEventListener("click", nextSlide);
-  prevBtn.addEventListener("click", prevSlide);
-
   // 키보드 네비게이션 지원 (← →, ESC)
   document.addEventListener("keydown", (e) => {
     if (popup.style.display === "grid") {
@@ -219,30 +201,6 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.key === "Escape") closePopup();
     }
   });
+  
+  
 });
-
-const infoWrap = document.querySelector(".info_wrap");
-const slides = document.querySelectorAll(".info_wrap > div");
-const prevBtn = document.querySelector(".btn.prev");
-const nextBtn = document.querySelector(".btn.next");
-
-let currentSlide = 0;
-
-function showSlide(index) {
-  if (index < 0) index = slides.length - 1;
-  if (index >= slides.length) index = 0;
-  currentSlide = index;
-  const offset = -index * 50; // %
-  infoWrap.style.transform = `translateX(${offset}%)`;
-}
-
-prevBtn.addEventListener("click", () => {
-  showSlide(currentSlide - 1);
-});
-
-nextBtn.addEventListener("click", () => {
-  showSlide(currentSlide + 1);
-});
-
-// 초기 상태
-showSlide(0);

@@ -458,7 +458,8 @@ section button{
 
 /* 슬라이더 */
 .swiper {
-  max-width: 98vw;
+  max-width: 430px;
+  width: 98vw;;
   overflow: hidden;
   display: flex;
   align-items: center;
