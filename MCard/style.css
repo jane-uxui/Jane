@@ -862,8 +862,8 @@ svg{fill:#999;width: 100%;}
 #contact .contact_wrap .contact_con{
   width: 120px;
 }
-.call_wrap img{width: 25px; height: 25px;}
-
+#contact .call_wrap img{width: 25px; height: 25px;}
+#contact .call_wrap a{padding:3px;}
 
 #Photo{
   text-align: center;
