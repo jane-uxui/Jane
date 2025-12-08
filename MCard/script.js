@@ -202,5 +202,25 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
   
-  
+
+  // 카카오페이 폰에서만 되게
+  const mobileLinks = document.querySelectorAll(".mobile-link");
+
+  mobileLinks.forEach(link => {
+    link.addEventListener("click", function (e) {
+      const userAgent = navigator.userAgent.toLowerCase();
+      const isMobile =
+        userAgent.includes("iphone") ||
+        userAgent.includes("ipod") ||
+        userAgent.includes("ipad") ||
+        userAgent.includes("android") ||
+        userAgent.includes("windows phone");
+
+      if (!isMobile) {
+        e.preventDefault(); // 링크 열림 방지
+        alert("PC에서는 실행할 수 없습니다.\n모바일 기기에서 다시 시도해주세요.");
+      }
+      // 모바일이면 그대로 이동됨 (링크 정상 작동)
+    });
+  });
 });
