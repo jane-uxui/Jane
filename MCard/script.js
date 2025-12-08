@@ -153,6 +153,22 @@ updateCountdown();
 
 
 document.addEventListener("DOMContentLoaded", () => {
+ const bgm = document.getElementById("bgm");
+  const toggleBtn = document.getElementById("soundToggle");
+
+  // 자동재생 시도 (모바일: muted로만 됨)
+  bgm.play().catch(() => {});
+
+  toggleBtn.addEventListener("click", () => {
+    if (bgm.muted) {
+      bgm.muted = false;
+      toggleBtn.textContent = "🔈"; // 소리 켜짐
+    } else {
+      bgm.muted = true;
+      toggleBtn.textContent = "🔇"; // 소리 꺼짐
+    }
+  });
+  
   const openGallery = document.getElementById("more");
   const openCall = document.getElementById("call")
   const popup = document.getElementById("gallery_popup");
