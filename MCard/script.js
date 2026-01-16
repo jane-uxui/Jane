@@ -121,7 +121,7 @@
 // };
 
 function updateCountdown() {
-  const targetDate = new Date("2026-01-17T11:00:00"); 
+  const targetDate = new Date("2026-01-17T00:00:00"); 
   const now = new Date();
 
   const diff = targetDate - now;
