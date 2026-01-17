@@ -1,0 +1,187 @@
+*{
+    margin:0; padding:0;
+    text-align: center;
+}
+body{
+    max-width: 400px;
+    margin:0 auto;
+}
+h1,h2,h3,p,a{
+    color:#333;
+    font-family: "Noto Serif KR", serif;
+    font-style: normal;
+}
+p.eyebrow{
+    font-size: 12px;
+    color:#999;
+    font-family: "Noto Serif", serif;
+}
+p.desc{
+    font-size: 12px;
+    padding: 30px 0;
+    line-height: 25px;
+}
+h2{
+    font-size: 20px;
+    font-weight: bold;
+}
+section{margin:60px auto; overflow: hidden;}
+img{width: 100%;}
+
+
+
+
+#kv1{
+    margin:0;
+}
+#kv1 .kv_eyebrow{
+    margin-top:20px;
+    font-weight: bold;
+    font-size: 12px;
+}
+#kv1 h1{
+    font-size: 36px;
+}
+#kv1 .img{
+    width: auto;
+    overflow: hidden;
+    background-image:url(img/#);
+    background-size: cover;
+    background-position: center;
+    background-color: #e6e6e6;
+}
+#img{
+    width: 100%;
+    padding:30px 0;
+}
+#img .img{
+    width: 312px;height: 450px;margin:0 auto;
+    background-image:url(img/#);
+    background-size: cover;
+    background-position: center;
+    background-color: #e6e6e6;
+    border-radius: 500px 500px 0 0 ;
+}
+#img .img_txt{
+    width: 150%; 
+    margin-left:-30%;margin-bottom: -40%;
+    rotate: -20deg;
+    opacity: 0.2;
+}
+#img .img_txt p{
+    font-size: 160px;
+    line-height: 120px;
+    color:#333;
+    font-family: "Qwitcher Grypen", cursive;
+    text-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+#kv1 .name_wrap{
+    margin:16px auto;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#kv1 .name{
+    font-size: 16px;
+    font-weight: bold;
+}
+#kv1 .line{
+    width: 1px;
+    height: 14px;
+    background-color: #545454;
+}
+#kv1 .date{
+    font-size: 14px;
+    color:#545454;
+}
+
+
+
+#kv2 .kv_eyebrow{
+    font-size: 12px;;
+}
+#kv2 h1{
+    padding-top:20px;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 50px;
+}
+#kv2 .img{
+    background-image: url(img/#);
+    background-color:#e6e6e6;
+    width: 312px;
+    height: 450px;
+    margin: -30px auto 0  auto;
+    border-radius: 500px 500px 0 0;
+    z-index: -999;
+    position: relative;
+    background-size: cover;
+    background-position: center;overflow: hidden;
+}
+#kv2 .img img{width: 100%;}
+#kv2 .name_wrap{
+    margin:20px auto;
+    width: 50%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#kv2 .name{
+    font-size: 16px;
+    font-weight: bold;
+}
+#kv2 .line{
+    width: 1px;
+    height: 14px;
+    background-color: #545454;
+}
+#kv2 .date{
+    font-size: 14px;
+    color:#545454;
+}
+
+
+
+
+
+#kv3 .kv_eyebrow{
+    font-size: 12px;;
+}
+#kv3 h1{
+    position: relative;
+    padding-top:20px;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 50px;
+    z-index:99;
+}
+#kv3 .img_wrap{
+    display: flex;
+    align-items: center;
+    z-index: -9;
+    justify-content: space-around;
+    margin-top:-30px;
+}
+#kv3 .img_wrap .name{
+    width: 18px;
+    font-weight: bold;
+}
+#kv3 .img{
+    background-image: url(img/#);
+    background-size: cover;
+    background-position: center;
+    background-color:#e6e6e6;
+    width: 286px;
+    height: 380px;
+    border-radius: 500px 500px 0 0;
+    z-index: 0;
+}
+#kv3 .date{
+    font-size: 14px;
+    color:#545454;
+    padding:20px 0;
+}
+
+
+
